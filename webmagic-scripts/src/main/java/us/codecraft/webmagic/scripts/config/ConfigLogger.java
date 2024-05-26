@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.Logger;
+import org.python.google.common.collect.Lists;
 import org.slf4j.LoggerFactory;
 
 public class ConfigLogger {
@@ -15,7 +16,7 @@ public class ConfigLogger {
      * @param value The config string
      */
     public static void configLogger(String value) {
-        List<Pair<String, Level>> options = List.of(
+        List<Pair<String, Level>> options = Lists.newArrayList(
             Pair.of("debug", Level.DEBUG),
             Pair.of("info", Level.INFO),
             Pair.of("warn", Level.WARN),

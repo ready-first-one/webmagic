@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.commons.cli.CommandLine;
 
 import lombok.Getter;
+import org.python.google.common.collect.Lists;
 import us.codecraft.webmagic.scripts.Params;
 
 public abstract class CommandLineOption {
@@ -23,7 +24,7 @@ public abstract class CommandLineOption {
     }
 
     public static List<CommandLineOption> getAllOptions() {
-        return List.of(new OptionL(), new OptionF(), new OptionS(), new OptionT(), new OptionG());
+        return Lists.newArrayList(new OptionL(), new OptionF(), new OptionS(), new OptionT(), new OptionG());
     }
 }
 
